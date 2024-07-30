@@ -31,8 +31,8 @@ jobs:
         python tracker.py
 
     - name: Commit and push changes
-     env:
-         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -43,5 +43,5 @@ jobs:
     - name: Deploy GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./docs
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        publish_dir: ./docs

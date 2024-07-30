@@ -28,7 +28,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python fetch_prs.py
+        python tracker.py
 
     - name: Commit and push changes
       run: |

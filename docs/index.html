@@ -165,12 +165,12 @@
                 data: dataset,
                 columns: [
                     { title: 'Title', data: 'title' },
-                    { title: 'url', data: 'url', render: function (data) { return `<a href="${data}" target="_blank">${data}</a>`; } },
+                    { title: 'Url', data: 'url', render: function (data) { return `<a href="${data}" target="_blank">${data.replace('https://github.com/','')}</a>`; } },
                     { title: 'User', data: 'user_login' },
                     { title: 'State', data: 'state' },
-                    { title: 'Merged At', data: 'merged_at', render: function (data) { return data ? new Date(data).toLocaleDateString() : 'N/A'; } },
                     { title: 'Approved', data: 'approved', render: function (data) { return data ? 'Yes' : 'No'; } },
-                    { title: 'Created At', data: 'created_at', render: function (data) { return new Date(data).toLocaleDateString(); } },
+                    { title: 'Created', data: 'created_at', render: function (data) { return new Date(data).toLocaleDateString(); } },
+                    { title: 'Merged', data: 'merged_at', render: function (data) { return data ? new Date(data).toLocaleDateString() : 'N/A'; } },
                 ]
             });
 

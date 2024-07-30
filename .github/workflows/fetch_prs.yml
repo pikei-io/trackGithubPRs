@@ -19,11 +19,16 @@ jobs:
       with:
         python-version: '3.8'
 
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests pandas
+
     - name: Run script to fetch PRs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        date > docs/all_prs.json
+        python tracker.py
 
     - name: Commit and push changes
       env:

@@ -90,8 +90,8 @@ all_prs = fetch_prs_across_repos(users_to_track, repositories)
 all_prs_df = pd.DataFrame(all_prs)
 
 # Save the results to a CSV file
-all_prs_df.to_csv('all_prs.csv', index=False)
-all_prs_df.to_json('all_prs.json', orient='records')
+# all_prs_df.to_csv('all_prs.csv', index=False)
+all_prs_df.to_json('docs/all_prs.json', orient='records')
 
 pd.set_option('display.max_columns', None)  # Ensure all columns are displayed
 pd.set_option('display.max_colwidth', None)  # Ensure full width of each column is displayed

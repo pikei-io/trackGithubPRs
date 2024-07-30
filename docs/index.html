@@ -26,7 +26,9 @@
     <link rel=stylesheet href=css/bootstrap.min.css>
     <link rel=stylesheet href=css/style.css>
     <script src=/js/modernizr.min.js></script>
-    <link href="https://cdn.datatables.net/v/dt/dt-2.1.2/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+
 </head>
 <body>
 <header role=banner id=header class="navbar-fixed-top slideInDown">
@@ -101,7 +103,10 @@
     gtag('js', new Date());
     gtag('config', "UA-1610214-8");
 </script>
-<script src="https://cdn.datatables.net/v/dt/dt-2.1.2/datatables.min.js"></script>
+<!--<script src="https://cdn.datatables.net/v/dt/dt-2.1.2/datatables.min.js"></script>-->
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
 <script>
     // var dataSet = [
     //     ['Tiger Nixon', 'System Architect', 'Edinburgh', '5421', '2011/04/25', '$320,800'],
@@ -163,6 +168,7 @@
             // Initialize DataTable with the fetched data
             $('#pr-table').DataTable({
                 data: dataset,
+                responsive: true,
                 columns: [
                     { title: 'Title', data: 'title' },
                     { title: 'Url', data: 'url', render: function (data) { return `<a href="${data}" target="_blank">${data.replace('https://github.com/','')}</a>`; } },

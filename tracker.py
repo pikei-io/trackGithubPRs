@@ -72,15 +72,15 @@ def fetch_prs_across_repos(users, repos):
 # List of repositories to check (in the format 'owner/repo')
 repositories = [
     'kata-containers/kata-containers',
-    'unikraft/unikraft',
-    'containerd/containerd'
+    # 'unikraft/unikraft',
+    # 'containerd/containerd'
 ]
 
 # List of users to track
 users_to_track = [
     'ananos',
-    'pyrromanis',
-    'gntouts'
+    # 'pyrromanis',
+    # 'gntouts'
 ]
 
 # Fetch PRs

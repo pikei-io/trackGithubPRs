@@ -69,8 +69,9 @@ def fetch_prs_across_repos(users, repos):
             all_prs.extend(fetch_user_prs(user, repo, state='all'))
     return all_prs
 
-users_to_track = os.getenv('USERS').split(',')
-repositories = os.getenv('REPOS').split(',')
+
+users_to_track = os.getenv('users').split(',')
+repositories = os.getenv('repos').split(',')
 
 # Fetch PRs
 all_prs = fetch_prs_across_repos(users_to_track, repositories)

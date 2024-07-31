@@ -18,6 +18,7 @@ on:
 
 jobs:
   fetchPullRequests:
+    name: "Running for users: ${{ github.event.inputs.users }} and repos: ${{ github.event.inputs.repos }}"
     runs-on: ubuntu-latest
 
     steps:

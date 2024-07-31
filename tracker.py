@@ -69,19 +69,8 @@ def fetch_prs_across_repos(users, repos):
             all_prs.extend(fetch_user_prs(user, repo, state='all'))
     return all_prs
 
-# List of repositories to check (in the format 'owner/repo')
-repositories = [
-    'kata-containers/kata-containers',
-    'unikraft/unikraft',
-    'containerd/containerd'
-]
-
-# List of users to track
-users_to_track = [
-    'ananos',
-    'pyrromanis',
-    'gntouts'
-]
+users_to_track = os.getenv('USERS').split(',')
+repositories = os.getenv('REPOS').split(',')
 
 # Fetch PRs
 all_prs = fetch_prs_across_repos(users_to_track, repositories)

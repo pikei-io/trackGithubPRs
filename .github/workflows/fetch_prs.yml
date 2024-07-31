@@ -5,6 +5,16 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      users:
+        description: 'List of users to track'
+        required: true
+        default: 'ananos,Pyrromanis,gntouts'
+      repos:
+        description: 'List of repositories to check'
+        required: true
+        default: 'kata-containers/kata-containers,unikraft/unikraft,containerd/containerd,sigstore/rekor-monitor'
+
 
 jobs:
   fetchPullRequests:

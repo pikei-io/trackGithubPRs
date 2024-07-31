@@ -38,6 +38,8 @@ jobs:
     - name: Run script to fetch PRs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        USERS: ${{ github.event.inputs.users }}
+        REPOS: ${{ github.event.inputs.repos }}
       run: |
         python tracker.py
 

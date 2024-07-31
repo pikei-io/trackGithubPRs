@@ -79,7 +79,7 @@ repositories = [
 # List of users to track
 users_to_track = [
     'ananos',
-    'pyrromanis',
+    'Pyrromanis',
     'gntouts'
 ]
 
